@@ -11,7 +11,7 @@ st.set_page_config(
 @st.cache_resource
 def load_model():
     model = tf.keras.models.load_model(
-        "Model/fake_news_model.keras"
+        "fake_news_model.keras"
     )
 
     with open("tokenizer.pkl", "rb") as file:
