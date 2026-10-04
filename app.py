@@ -11,10 +11,10 @@ st.set_page_config(
 @st.cache_resource
 def load_model():
     model = tf.keras.models.load_model(
-        "Model/fake_news_lstm.keras"
+        "Model/fake_news_model.keras"
     )
 
-    with open("Model/tokenizer.pkl", "rb") as file:
+    with open("tokenizer.pkl", "rb") as file:
         tokenizer = pickle.load(file)
     return model, tokenizer
 model, tokenizer = load_model()
