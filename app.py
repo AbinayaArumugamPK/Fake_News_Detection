@@ -35,11 +35,8 @@ def predict_news(news):
         padding="post",
         truncating="post"
     )
-    probability = model.predict(
-        padded,
-        verbose=0
-    )[0][0]
-    if probability >= 0.5:
+    probability = float(model.predict(padded, verbose=0)[0][0]
+                        if probability >= 0.5:
         result = "REAL NEWS"
         confidence = probability * 100
     else:
